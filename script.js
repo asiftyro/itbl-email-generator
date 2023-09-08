@@ -15,7 +15,6 @@ f_error = document.querySelector("[name='f_error']");
 f_total_error = document.querySelector("[name='f_total_error']");
 
 
-
 reset_i = () => {
     s_ans.value = "";
     i_date.value = "";
@@ -24,6 +23,7 @@ reset_i = () => {
     i_504.value = "";
     i_total.value = "";
 }
+
 reset_f = () => {
     f_ans.forEach(element => {
         element.textContent = "";
@@ -34,6 +34,7 @@ reset_f = () => {
 
 b_reset.addEventListener("click", (e) => {
     reset_i();
+    reset_f();
 });
 b_generate.addEventListener("click", (e) => {
     reset_f();
