@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITBL Email Generator</title>
+    <link rel="stylesheet" href="lit.css" />
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <div class="c">
+        <div class="row">
+            <div class="col card"><h2>ANS Server Error Notification Email Generator</h2></div>
+        </div>
+        <div class="row">
+            <div class="3 col card">
+                <h3>Arguments:</h3>
+                <dl>
+                    <dt><b>Date</b></dt>
+                    <dd><input class="card" type="date" name="i_date"></dd>
+                    <dt><b>ANS</b></dt>
+                    <dd>
+                        <select class="card" name="s_ans">
+                            <option value=""></option>
+                            <option value="Grameenphone">Grameenphone</option>
+                            <option value="Robi">Robi</option>
+                            <option value="Banglalink">Banglalink</option>
+                            <option value="Teletalk">Teletalk</option>
+                            <option value="ADN">ADN</option>
+                            <option value="Metronet">Metronet</option>
+                            <option value="Mirnet">Mirnet</option>
+                            <option value="FusionNet">FusionNet</option>
+                            <option value="Brilliant">Brilliant</option>
+                            <option value="BanglaPhone">BanglaPhone</option>
+                            <option value="AmberIT">AmberIT</option>
+                            <option value="RanksITT">RanksITT</option>
+                        </select>
+                    </dd>
+                    <dt><b>Total hit(s) [Success + Fail]</b></dt>
+                    <dd><input class="card" type="number" name="i_total"></dd>
+                    <dt><b>Error hit(s)</b></dt>
+                    <dd>
+                        <ol>
+                            <li>500: <input class="card" type="number" name="i_500" step="1"></li>
+                            <li>502: <input class="card" type="number" name="i_502" step="1"></li>
+                            <li>504: <input class="card" type="number" name="i_504" step="1"></li>
+                        </ol>
+                    </dd>
+                </dl>
+                <br>
+                <hr>
+                <center>
+                    <button class="btn" name="b_reset">Reset</button>
+                    <button class="btn primary" name="b_generate">Generate</button>
+                </center>
+            </div>
+            <div class="9 col card">
+                <h3>Output:</h3>
+
+
+                <hr>
+                <b>Sub:</b><br><br>
+                Getting server error from <span name="f_ans"></span> end.
+                <hr>
+                <b>Body:</b><br><br>
+                <hr>
+                <p>Dear Concerned,</p>
+
+                <p>Greetings from Infozillion Teletech BD.</p>
+
+                <p>This is to inform you that we faced a total of <span name="f_total_error"></span> error(s) in sending
+                    requests to <span name="f_ans"></span> on
+                    <span name="f_date"></span> (00:00:00 - 23:59:59).
+                </p>
+
+                <p>
+                    <br>
+                <div name="f_error"></div>
+                </p>
+
+                <p>
+                    Please look into this.</p>
+                <p>
+                    <br>For any query, please contact us through the Helpdesk ticketing system, Email, or Mobile.
+                <ul>
+                    <li>Helpdesk Ticketing System: https://helpdesk.mnpspbd.com/</li>
+                    <li>Email: dipping_support@infotelebd.com</li>
+                    <li>Mobile: +8801706955428</li>
+                </ul>
+                </p>
+                <p>
+                    Regards,<br>
+                    <br>
+                    <br>
+                    Support Services<br>
+                    Infozillion Teletech BD<br>
+                    Hosaf High Tower<br>
+                    9 Mohakhali C/A, 12th Floor<br>
+                    Dhaka -1212, Bangladesh<br>
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
