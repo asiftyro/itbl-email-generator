@@ -63,7 +63,7 @@ b_generate.addEventListener("click", (e) => {
     total_error = 0;
     if (i_500.value) {
         total_error += parseInt(i_500.value);
-        f_error.innerHTML += `<br> HTTP Error: ${i_500.value.padStart(5, "0")} instance(s)`;
+        f_error.innerHTML += `<br> HTTP Error 500: ${i_500.value.padStart(5, "0")} instance(s)`;
     }
     if (i_502.value) {
         total_error += parseInt(i_502.value);
